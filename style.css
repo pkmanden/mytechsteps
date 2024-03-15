@@ -87,8 +87,8 @@ hr {
 }
   
 
-  /*Using keyframes for shaking an image*/
-  @keyframes shake {
+/*Using keyframes for shaking an image*/
+@keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -100,39 +100,54 @@ hr {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+}
 
  
-  /* Sidebar for About Page */
-  .about-sidebar {
+/* Sidebar for About Page */
+.about-sidebar {
     top: 60px; 
     left: 0;
     height: 100%;
     width: 10%;
     transition: width 0.5s;
-  }
-  
-  .about-sidebar a {
+}
+
+.about-sidebar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 18px;
     color: #D0B8A8;
     display: block;
-  }
-  
-  .about-sidebar a:hover {
-    color: #5f2d0b;
-  }
+}
 
-  .about-sidebar a.active {
+.about-sidebar a:hover {
     color: #5f2d0b;
-  }
+}
 
-  .sticky {
+.about-sidebar a.active {
+    color: #5f2d0b;
+}
+
+.sticky {
     position: fixed;
     top: 0;
     width: 100%
-  }
-  
+}
 
-  
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-device-width: 768px) {
+    .navbar {
+        bottom: auto !important;
+    } 
+    .wrapper {
+        display: block !important;
+    }
+    .about-sidebar {
+        display: inline-flex !important;
+    }
+}
+@media screen and (orientation:landscape) {
+    .about-sidebar {
+        display: inline-flex !important;
+    }
+}
